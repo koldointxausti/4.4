@@ -35,7 +35,7 @@ public class Worker extends Person {
 
 	public boolean checkSalary(double salary) {
 
-		if (salary > 0.0)
+		if (salary >= 0.0)
 			return true;
 
 		return false;
@@ -43,11 +43,8 @@ public class Worker extends Person {
 	}
 	
 	
-	// KOnprobatu ondo dagola
 	public double earnedMoney() {
-		
 		Calendar now = new GregorianCalendar();
-		
 		int years = now.get(Calendar.YEAR)-joined.get(Calendar.YEAR);
 		int months = now.get(Calendar.MONTH)-joined.get(Calendar.MONTH);
 		
