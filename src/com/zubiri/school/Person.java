@@ -46,35 +46,63 @@ public class Person {
 			this.phoneNumber = phoneNumber;
 	}
 
+	/**
+	 * 
+	 * @return int with the age of the person
+	 */
 	public int age() {
 		Calendar now = new GregorianCalendar();
 		return now.get(Calendar.YEAR) - birthDate.get(Calendar.YEAR);
 	}
 
+	/**
+	 * 
+	 * @param name you want to check
+	 * @return true if the entered name has not numbers or symbols, else false
+	 */
 	public boolean checkName(String name) {
 		if (name.matches("[A-Za-z]+"))
 			return true;
 		return false;
 	}
-
+	
+	/**
+	 * 
+	 * @param date you want to check
+	 * @return true if the date you enter is smaller than today's date
+	 */
 	public boolean checkDate(Calendar date) {
 		if (date.compareTo(new GregorianCalendar()) < 0)
 			return true;
 		return false;
 	}
 
+	/**
+	 * 
+	 * @param dni
+	 * @return true if it has a dni format
+	 */
 	public boolean checkDni(String dni) {
 		if (dni.length() == 9 && dni.substring(0, 7).matches("[0-9]+") && dni.substring(8).matches("[A-Za-z]"))
 			return true;
 		return false;
 	}
 
+	/**
+	 * 
+	 * @param String - phoneNumber
+	 * @return true if the phoneNumber is only numbers
+	 */
 	public boolean checkPhoneNumber(String phoneNumber) {
 		if (phoneNumber.matches("[0-9]+") && phoneNumber.length() == 9)
 			return true;
 		return false;
 	}
 
+	/**
+	 * 
+	 * @return which fields are empty - string made by numbers: 1-if the name property is empty; 2-birth date;3-dni;4-phoneNumber.
+	 */
 	public String checkPerson() {
 		String missingFields = "";
 		if (name.matches(""))

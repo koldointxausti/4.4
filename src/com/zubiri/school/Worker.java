@@ -32,7 +32,12 @@ public class Worker extends Person {
 
 			this.joined = joined;
 	}
-
+	
+	/**
+	 * 
+	 * @param salary you want to check
+	 * @return true if it's bigger than 0.0
+	 */
 	public boolean checkSalary(double salary) {
 
 		if (salary >= 0.0)
@@ -42,7 +47,10 @@ public class Worker extends Person {
 
 	}
 	
-	
+	/**
+	 * 
+	 * @return the calculation of the totally earned money of this worker since he/she joined
+	 */
 	public double earnedMoney() {
 		Calendar now = new GregorianCalendar();
 		int years = now.get(Calendar.YEAR)-joined.get(Calendar.YEAR);
