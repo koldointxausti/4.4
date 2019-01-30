@@ -216,13 +216,12 @@ public class School {
 	}
 	
 	/**
-	 * <p>This option doesn't work properly yet, we are working on that</p>
 	 * @param classroom you want to find the tutor of
 	 * @return position of the teacher object with that classroom assigned in tutor
 	 */
 	public int tutorOf(String classroom) {
 		for(int i=0;i<teachers.size();i++) {
-			if(teachers.get(i).isTutor())
+			if(teachers.get(i).getTutor().equals(classroom))
 				return i;
 		}
 		return -1;

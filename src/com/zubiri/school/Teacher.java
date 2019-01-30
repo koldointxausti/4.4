@@ -27,11 +27,8 @@ public class Teacher extends Worker{
 	}
 
 	public void setTutor(String tutor) {
-
-		if (isTutor())
-
+		if (!isTutor())
 			this.tutor = tutor;
-
 	}
 	
 	public ArrayList<String> getSubjects() {
@@ -96,7 +93,6 @@ public class Teacher extends Worker{
 	 * @return true if the teacher has asigned a classroom as tutor
 	 */
 	public boolean isTutor() {
-		
 		if(tutor.matches(""))
 			return false;
 		return true;

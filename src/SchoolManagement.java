@@ -723,7 +723,7 @@ public class SchoolManagement {
 						// print the created ID for the student
 						System.out.println("The ID of " + student.getName() + " is " + student.getStudentID());
 						break;
-					case "6":
+					case "6": //tutor
 						if (school.getStudents().size() > 0) {
 							System.out.println(
 									"Whose tutor do you want to know? (Enter the ID of the Student you want to find)");
@@ -733,7 +733,7 @@ public class SchoolManagement {
 								int tutorIndex = school.tutorOf(school.getStudent(studentIndex).getClassroom());
 								if (tutorIndex >= 0)
 									System.out.println("The tutor of " + school.getStudent(studentIndex).getName()
-											+ " is " + school.getTeacher(tutorIndex));
+											+ " is " + school.getTeacher(tutorIndex).getName()+", "+school.getTeacher(tutorIndex).getTeacherID());
 								else
 									System.out.println("That class has not tutor assigned");
 								break;
