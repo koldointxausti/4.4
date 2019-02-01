@@ -50,13 +50,7 @@ public class SchoolManagement {
 						teachersRepeat = false;
 						break;
 					case "1":
-						if (school.getTeachers().size() > 0) {
-							for (int i = 0; i < school.getTeachers().size(); i++) {
-								System.out.println("- " + school.getTeacher(i).getTeacherID() + "\t"
-										+ school.getTeacher(i).getName());
-							}
-						} else
-							System.out.println("There's no teacher created yet.");
+						school.printTeachers();
 						break;
 					case "2": // view teachers info
 						if (school.getTeachers().size() > 0) {
