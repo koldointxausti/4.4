@@ -7,7 +7,7 @@ public class Person {
 
 	
 	private String name = "";
-	private static Calendar birthDate = new GregorianCalendar(0, 0, 0);
+	private Calendar birthDate = new GregorianCalendar(0, 0, 0);
 	private String dni = "";
 	private String phoneNumber = "";
 	private static int counter = 0;
@@ -16,7 +16,11 @@ public class Person {
 		counter++;
 	}
 	
-	public static int getCounter() {
+	public static boolean getCounter() {
+		return counter;
+	}
+	
+	public int getCounter() {
 		return counter;
 	}
 	
@@ -68,9 +72,9 @@ public class Person {
 	 * 
 	 * @return int with the age of the person
 	 */
-	public static int age(Calendar _birthdate) {
+	public int age() {
 		Calendar now = new GregorianCalendar();
-		return now.get(Calendar.YEAR) - _birthDate.get(Calendar.YEAR);
+		return now.get(Calendar.YEAR) - birthDate.get(Calendar.YEAR);
 	}
 
 	/**
