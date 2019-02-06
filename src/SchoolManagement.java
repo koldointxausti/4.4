@@ -25,6 +25,7 @@ public class SchoolManagement {
 				System.out.println("Enter a number, try again.");
 				break;
 			case "0": // stop the program
+				System.out.println(Person.getCounter());
 				System.out.println("Bye!");
 				repeat = false;
 				break;
@@ -223,6 +224,9 @@ public class SchoolManagement {
 						break;
 					case "5": // new teacher
 						System.out.println("*NEW TEACHER*");
+						System.out.println("Age:");
+						int age = sc.nextInt();
+						if()
 						Teacher teacher = new Teacher();
 						// name
 						System.out.println("Name:");
